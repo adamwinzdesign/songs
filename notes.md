@@ -12,7 +12,7 @@ create new app on heroku
 connect to github
 enable automatic depolyments on the specified branch
 
-We need to make the port dynamic using an environment variable
+We need to make the port dynamic using an environment variable or heroku will still throw an error
 const port = process.env.PORT || 4000;  // PORT is for heroku, 4000 is for local deployment
 
 server.listen(port, () => console.log(`*** Server running on port ${port}! ***`));
