@@ -7,4 +7,12 @@ set up index.js to start the server, indicate port, ect.
 npm start // starts the server
 npm i -D nodemon  // installs nodemon as a development dependency
 
+push new code to github so heroku will have something to work with, not just an empty repo
 create new app on heroku
+connect to github
+enable automatic depolyments on the specified branch
+
+We need to make the port dynamic using an environment variable
+const port = process.env.PORT || 4000;  // PORT is for heroku, 4000 is for local deployment
+
+server.listen(port, () => console.log(`*** Server running on port ${port}! ***`));
